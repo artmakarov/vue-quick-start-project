@@ -1,0 +1,60 @@
+@import '~noty/lib/noty.css';
+//@import '~noty/lib/themes/mint.css';
+
+#noty_layout__center
+  // fix размытие шрифта
+  margin calc(-8%) 0 0 calc(-12%)
+  -webkit-transform none
+  transform none
+
+.noty_has_timeout.noty_has_progressbar
+    .noty_progressbar
+      background-color #333
+
+.noty_theme__mint
+  &.noty_bar
+    margin 4px 0
+    overflow hidden
+    border-radius 2px
+    position relative
+    font-family 'Roboto', sans-serif
+
+    .noty_body
+      padding 10px
+      font-size 14px
+
+      h1, h2, h3, h4, h5
+        margin-bottom .6em
+
+    //.noty_buttons
+    //  padding 10px
+
+  &.noty_type__alert,
+  &.noty_type__notification
+    background-color #fff
+    border-bottom 1px solid #D1D1D1
+    color #2F2F2F
+    box-shadow 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12)
+
+  &.noty_type__warning
+    background-color #ff9800
+    border-bottom 1px solid #ef6c00
+    color #fff
+
+  &.noty_type__error
+    background-color #f44336
+    border-bottom 1px solid #c62828
+    color #fff
+
+  &.noty_type__success
+    background-color #4caf50
+    border-bottom 1px solid #388e3c
+    color #fff
+
+  &.noty_type__info,
+  &.noty_type__information
+    background-color #1e88e5
+    border-bottom 1px solid #1565c0
+    color #fff
