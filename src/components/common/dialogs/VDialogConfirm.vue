@@ -10,17 +10,18 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn :color="(button.no && button.no.color) || 'neutral lighten-1'"
+        <v-btn v-if="!hideNo"
+               :color="(button.no && button.no.color) || null"
                @click="$emit('no')"
                :disabled="loading"
-               :dark="!loading"
         >
           {{ (button.no && button.no.text) || 'Нет' }}
         </v-btn>
 
         <v-spacer/>
 
-        <v-btn :color="(button.yes && button.yes.color) || 'success'"
+        <v-btn v-if="!hideYes"
+               :color="(button.yes && button.yes.color) || 'success'"
                @click="$emit('yes')"
                :disabled="loading"
                :loading="loading"
@@ -40,6 +41,8 @@
     props: {
       show: Boolean,
       loading: Boolean,
+      hideNo: Boolean,
+      hideYes: Boolean,
 
       title: {
         type: String,

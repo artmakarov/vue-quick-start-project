@@ -1,5 +1,5 @@
 <template>
-  <v-layout column fill-height class="page-settings">
+  <v-layout column fill-height>
 
     <!-- Табы -->
 

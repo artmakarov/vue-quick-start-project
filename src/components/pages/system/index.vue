@@ -1,5 +1,5 @@
 <template>
-  <v-layout column fill-height class="page-system">
+  <v-layout column fill-height page-system>
 
     <v-page-header title="Система" :loading="loading"/>
 
