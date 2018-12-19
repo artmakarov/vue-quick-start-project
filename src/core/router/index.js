@@ -45,13 +45,11 @@ router.beforeEach((to, from, next) => {
     return next(from.fullPath);
   }
 
-  if (!to.meta.skipAuth) {
-    if (!authorized) {
-      return next({
-        path: '/login',
-        query: { redirect: to.fullPath },
-      });
-    }
+  if (!to.meta.skipAuth && !authorized) {
+    return next({
+      path: '/login',
+      query: { redirect: to.fullPath },
+    });
   }
 
   if (!checkRouteAvailable(to)) {
